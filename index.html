@@ -72,7 +72,7 @@
     <div class="container my-5">
         <h1 id="h1">Willkommen zum Quiz!</h1>
 
-        <center>
+        <!--<center>
             <div id="usernameRow">
                 <div id="hideShow">
                     <p class="mt-4">
@@ -86,11 +86,29 @@
                     </button>
                 </div>
             </div>
-        </center>
+        </center>-->
     </div>
 
-    <main id="quizDisplay">
-        <div class="m-auto">
+    <main>
+        <div id="popup" class="popupWindow">
+            <div id="username" class="popupContent">
+                <div id="hideShow">
+                    <span class="close">&times;</span>
+                    <center>
+                        <p class="mt-4">
+                            Hello! Great to see you :)
+                            <br />
+                            What's your name?
+                        </p>
+                        <input id="inputTag" type="text" placeholder="Your name..." class="mt-4 mb-2" />
+                        <button id="userName" class="btn btn-primary btn-uname" type="button">
+                            Next
+                        </button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div id="quizDisplay" class="m-auto">
             <h2>Frage <span id="questionNumber">X</span></h2>
             <section class="question">
                 <section id="questionContainer">
@@ -164,7 +182,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="scripts/username.js"></script>
-    <script src="scripts/quiz.js"></script>
+    <script src="quiz.js"></script>
 </body>
 
 </html>

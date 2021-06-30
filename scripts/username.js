@@ -1,56 +1,48 @@
-const myButton = document.querySelector("#userName");
-const myButton2 = document.querySelector("#showUName");
-const myHeading = document.querySelector("h1");
+const popup = document.querySelector('#popup')
+const spanClose = document.querySelector('.close')
+const setUser = document.querySelector('#userName')
+const setUserNew = document.querySelector('#showUName')
+const newH1 = document.querySelector('h1')
 
-function setUserName() {
-    let myName = document.querySelector("#inputTag").value;
-    if (!myName) {
-        //setUserName();
-    } else {
-        localStorage.setItem("name", myName);
-        myHeading.textContent =
-            myName + " schaffst du es alle Fragen zu beantworten?";
-    }
+window.onload = function () {
+    popup.style.display = 'block';
 }
 
-if (!localStorage.getItem("name")) {
-    setUserName();
-} else {
-    let storedName = localStorage.getItem("name");
-    myHeading.textContent =
-        storedName + " schaffst du es alle Fragen zu beantworten?";
+spanClose.onclick = function () {
+    popup.style.display = 'none';
 }
 
-myButton.onclick = function () {
+setUser.onclick = function () {
     setUserName();
-    hideUNameRow();
-};
+    popup.style.display = 'none';
+}
 
-//Damit sich der Text auch ändert, wenn man nur den Enter-Button drückt
+setUserNew.onclick = function () {
+    popup.style.display = 'block';
+}
 
-document.querySelector("#inputTag").addEventListener("keyup", function (event) {
+document.querySelector('#inputTag').addEventListener('keyup', function (event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-        document.querySelector("#userName").click();
+        setUser.click();
     }
 });
 
-//Damit das #userNameRow nicht mehr angezeigt wird + wieder angezeigt wird
-
-function hideUNameRow() {
-    let hide = document.querySelector("#hideShow");
-    hide.classList.add("hide");
-}
-
-function showUNameRow() {
-    let show = document.querySelector("#hideShow");
-
-    if (show.classList.contains("hide")) {
-        show.classList.remove("hide");
+function setUserName() {
+    let myName = document.querySelector('#inputTag').value;
+    if (!myName) {
+        //setUserName();
     } else {
+        localStorage.setItem('name', myName);
+        newH1.textContent =
+            myName + ' schaffst du es alle Fragen zu beantworten?';
     }
 }
 
-myButton2.onclick = function () {
-    showUNameRow();
-};
+if (!localStorage.getItem('name')) {
+    setUserName();
+} else {
+    let storedName = localStorage.getItem('name');
+    newH1.textContent =
+        storedName + ' schaffst du es alle Fragen zu beantworten?';
+}
