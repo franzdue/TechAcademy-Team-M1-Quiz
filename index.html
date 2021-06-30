@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Quiz M1
+    </title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <link rel="shortcut icon" href="images/question-mark.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/question-mark.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="images/question-mark.png" alt="question mark" class="logo ms-3" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbars">
+                    <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Zum Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Meine Rekorde</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+                                aria-expanded="false">Joker</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="#">50/50</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Frage überspringen</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Zeit anhalten</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="text-end">
+                        <button id="showUName" type="button" class="btn btn-outline-light me-2 btn-cuname">
+                            Username ändern
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <h1 id="h1">Willkommen zum Quiz!</h1>
+
+        <center>
+            <div id="usernameRow">
+                <div id="hideShow">
+                    <p class="mt-4">
+                        Hallo! Schön, dass du vorbeischaust :)
+                        <br />
+                        Wie heißt du?
+                    </p>
+                    <input id="inputTag" type="text" placeholder="Dein Name" class="mt-4 mb-2" />
+                    <button id="userName" class="btn btn-primary btn-uname" type="button">
+                        Username ändern
+                    </button>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <main id="quizDisplay">
+        <div class="m-auto">
+            <h2>Frage <span id="questionNumber">X</span></h2>
+            <section class="question">
+                <section id="questionContainer">
+                    <p id="question"></p>
+                    <p id="points"></p>
+                </section>
+                <section id="answerContainer">
+                    <center>
+                        <button id="answerButton1" class="answerBtn" onclick="giveAnswer(1);"></button>
+                        <button id="answerButton2" class="answerBtn" onclick="giveAnswer(2);"></button>
+                        <button id="answerButton3" class="answerBtn" onclick="giveAnswer(3);"></button>
+                        <button id="answerButton4" class="answerBtn" onclick="giveAnswer(4);"></button>
+                    </center>
+                </section>
+                <section>
+                    <center>
+                        <button id="nextQuestionButton" onclick="nextQuestion();">
+                            nächste Frage
+                        </button>
+                    </center>
+                </section>
+            </section>
+            <div id="progress">
+                <div class="progressItems">
+                    <p class="score">
+                        Score:
+                    </p>
+                    <h3 class="progressNumber" id="score">
+                        0
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <hr />
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                        Copyright &copy; 2021 Quizapp made by
+                        <a href="https://www.tech-academy.io/" target="_blank" rel="noopener noreferrer">WebDev Team
+                            M1</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 d-flex flex-row-reverse">
+                    <ul class="social-icons">
+                        <li>
+                            <a class="linkedin" href="https://www.linkedin.com/company/techacdmy/?originalSubdomain=de"
+                                target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="https://www.instagram.com/techacademy_/?hl=en" target="_blank"
+                                rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="https://www.facebook.com/TechAcademyFFM/" target="_blank"
+                                rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="whatsapp" href="#" target="_blank" rel="noopener noreferrer"><i
+                                    class="fa fa-whatsapp"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/username.js"></script>
+    <script src="scripts/quiz.js"></script>
+</body>
+
+</html>

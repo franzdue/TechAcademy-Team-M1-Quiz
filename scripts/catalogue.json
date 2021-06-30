@@ -1,0 +1,104 @@
+{
+    "questions": [
+        {
+            "text": "Wer ist am bekanntesten?",
+            "answers": [
+                "Jonathan Joestar",
+                "Joseph Joestar",
+                "Kujo Jotaro",
+                "Giorno Giovanna"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "text": "Grammatikalisch einfachste Sprache?",
+            "answers": [
+                "Chinesisch",
+                "Englisch",
+                "Spanisch",
+                "Python"
+            ],
+            "correctAnswer": 4
+        },
+        {
+            "text": "Was ist deine Lieblingsfarbe?",
+            "answers": [
+                "Blau",
+                "Gelb",
+                "Rot",
+                "Grün"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "text": "Was ist deine Quest?",
+            "answers": [
+                "Den heiligen Gral finden",
+                "Den heiligen Gral finden",
+                "Den heiligen Gral finden",
+                "Den heiligen Gral finden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "text": "Wie heißt du?",
+            "answers": [
+                "Sir Lancelot of Camelot",
+                "Sir Robin of Camelot",
+                "Sir Galahad of Camelot",
+                "Sir Bedevere of Camelot"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "text": "Was ist die Hauptstadt des Assyrischen Reichs?",
+            "answers": [
+                "Stadt Assam",
+                "Stadt Amen",
+                "Stadt Aššur",
+                "Stadt Asssi"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "text": " Welche ist der am weitesten vom Erdmittelpunkt entfernte Punkt auf der Erdoberfläche?",
+            "answers": [
+                "Mount Chimborazo",
+                "Mount Everest",
+                "Mauna Sea",
+                "Die Zugspitze"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "text": "Welcher ehemalige US-Präsident war früher Schauspieler?",
+            "answers": [
+                "J.F. Kennedy ",
+                "Ronald Reagan",
+                "Roosevelt",
+                "Barack Obama"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "text": " In welchem Jahr wurde das erste YouTube-Video hochgeladen?",
+            "answers": [
+                "2008",
+                "2009",
+                "2005",
+                "2003"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "text": "Wie hoch ist die durchschnittliche Fluggeschwindigkeit einer beladenen Schwalbe?",
+            "answers": [
+                "24 km/h",
+                "3km/h",
+                "15min/s",
+                "eine afrikanische oder englische Schwalbe?"
+            ],
+            "correctAnswer": 4
+        }
+    ]
+}
