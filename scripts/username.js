@@ -1,7 +1,7 @@
 const popup = document.querySelector('#popup')
 const spanClose = document.querySelector('.close')
 const setUser = document.querySelector('#userName')
-const setUserNew = document.querySelector('#showUName')
+const setUserNew = document.querySelector('#newUser')
 const newH1 = document.querySelector('h1')
 
 window.onload = function () {
@@ -35,7 +35,7 @@ function setUserName() {
     } else {
         localStorage.setItem('name', myName);
         newH1.textContent =
-            myName + ' schaffst du es alle Fragen zu beantworten?';
+            myName + ', will you answer everything correctly?';
     }
 }
 
@@ -44,5 +44,5 @@ if (!localStorage.getItem('name')) {
 } else {
     let storedName = localStorage.getItem('name');
     newH1.textContent =
-        storedName + ' schaffst du es alle Fragen zu beantworten?';
+        storedName + ', will you answer everything correctly?';
 }
