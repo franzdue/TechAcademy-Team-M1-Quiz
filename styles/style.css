@@ -141,54 +141,6 @@ button:focus {
 
 /**Main**/
 
-/**Quiz Content**/
-
-#answerContainer {
-    font-size: 20px;
-    line-height: 1.5;
-    padding: 15px 0;
-}
-#quizDisplay {
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    border-radius: 10px;
-    padding: 15px 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    text-align: center;
-    align-content: center;
-}
-
-.question {
-    border-bottom: 1px solid rgb(31, 48, 155);
-    margin-bottom: 15px;
-    color: black;
-    /*font-size: 20px;*/
-    line-height: 1.5;
-    padding: 15px 0;
-}
-
-.question:last-child {
-    border-bottom: none;
-}
-
-.answerBtn {
-    width: 100%;
-}
-
-button.wrong {
-    background-color: rgb(194, 16, 88);
-}
-
-button.correct {
-    background-color: rgb(121, 206, 16);
-}
-
 /**Popup**/
 
 .popupWindow {
@@ -224,6 +176,10 @@ button.correct {
 
 .popupHeader {
     padding: 0.5rem 0 0.3rem 0;
+}
+
+.popupH2 {
+    color: #1f309b;
 }
 
 .close {
@@ -263,6 +219,58 @@ button.correct {
     border: solid 1px #fff;
     transform: scale(1.1);
 }
+
+/**Quiz Content**/
+
+#answerContainer {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 15px 0;
+}
+
+#quizDisplay {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80% !important;
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: inherit auto 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+.quizContainer {
+    margin-bottom: 5rem !important;
+}
+
+.question {
+    border-bottom: 1px solid rgb(31, 48, 155);
+    margin-bottom: 15px;
+    color: black;
+    /*font-size: 20px;*/
+    line-height: 1.5;
+    padding: 15px 0;
+}
+
+.question:last-child {
+    border-bottom: none;
+}
+
+.answerBtn {
+    width: 100%;
+}
+
+button.wrong {
+    background-color: rgb(194, 16, 88);
+}
+
+button.correct {
+    background-color: rgb(121, 206, 16);
+}
+
 
 /**Footer**/
 
