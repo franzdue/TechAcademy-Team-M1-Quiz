@@ -97,21 +97,7 @@ background-color: #ffffff;
 width: 100%;
 }
 
-.btn-uname {
-font-size: 1.25em;
-background-color: rgb(31, 48, 155);
-color: aliceblue;
-border: 1px solid rgb(31, 48, 155);
-display: block;
-transition: all 200ms ease-in-out;
-}
 
-.btn-uname:hover,
-.btn-uname:focus {
-background-color: #1f309b;
-border: solid 1px #fff;
-transform: scale(1.1);
-}
 
 .hide {
 display: none;
@@ -227,12 +213,29 @@ transform: scale(1.2);
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    border-radius: 1rem;
+    width: 70%;
+    max-width: 540px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: slide;
+    animation-duration: 1s
+}
+
+@keyframes slide {
+    from {top: -500px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.popupHeader {
+    padding: 0.5rem 0 0.3rem 0;
 }
 
 .close {
     color: #aaa;
     float: right;
+    position: relative;
+    top: -1.5rem;
+    right: -0.5rem;
     font-size: 28px;
     font-weight: bold;
 }
@@ -242,6 +245,27 @@ transform: scale(1.2);
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form-control {
+    width: 80%;
+}
+
+.btn-uname {
+    font-size: 1.25em;
+    background-color: rgb(31, 48, 155);
+    color: aliceblue;
+    border: 1px solid rgb(31, 48, 155);
+    display: block;
+    transition: all 200ms ease-in-out;
+    width: 20%;
+}
+
+.btn-uname:hover,
+.btn-uname:focus {
+    background-color: #1f309b;
+    border: solid 1px #fff;
+    transform: scale(1.1);
 }
 
 /**Footer**/

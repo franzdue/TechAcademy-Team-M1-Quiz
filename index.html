@@ -28,16 +28,15 @@
                 <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img src="images/question-mark.png" alt="question mark" class="logo ms-3" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+                    aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbars">
                     <ul class="navbar-nav mx-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Zum Quiz</a>
@@ -70,29 +69,34 @@
     </header>
 
     <div class="container my-5">
-        <h1 id="h1">Willkommen zum Quiz!</h1>
+        <h1 class="display-2">Willkommen zum Quiz!</h1>
     </div>
 
     <main>
         <div id="popup" class="popupWindow">
             <div id="username" class="popupContent">
                 <div id="hideShow">
-                    <span class="close">&times;</span>
-                    <center>
-                        <p class="mt-4">
-                            Hello! Great to see you :)
-                            <br />
-                            What's your name?
-                        </p>
-                        <input id="inputTag" type="text" placeholder="Your name..." class="mt-4 mb-2" />
-                        <button id="userName" class="btn btn-primary btn-uname" type="button">
-                            Next
-                        </button>
-                    </center>
+                    <div class="popupHeader">
+                        <span class="close">&times;</span>
+                        <center>
+                            <h3 class="popupH2 h3">Hello! Great to see you here :)</h3>
+                        </center>
+                    </div>
+                    <div class="popupBody">
+                        <center>
+                            <p class="popupText">
+                                What's your name?
+                            </p>
+                            <input id="inputTag" type="text" placeholder="Your name..." class="mb-2 form-control">
+                            <button id="userName" class="btn btn-primary btn-uname" type="button">
+                                Next
+                            </button>
+                        </center>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="quizDisplay" class="m-auto">
+        <div id="quizDisplay" class="m-auto container">
             <h2>Frage <span id="questionNumber">X</span></h2>
             <section class="question">
                 <section id="questionContainer">
