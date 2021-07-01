@@ -1,6 +1,6 @@
 let catalogue = {};
-var questionNumberElement = document.querySelector("#questionNumber");
-var questionElement = document.querySelector("#question");
+const questionNumberElement = document.querySelector("#questionNumber");
+const questionElement = document.querySelector("#question");
 
 const answerButton1 = document.querySelector("#answerButton1");
 const answerButton2 = document.querySelector("#answerButton2");
@@ -9,7 +9,7 @@ const answerButton4 = document.querySelector("#answerButton4");
 const nextQuestionButton = document.querySelector("#nextQuestionButton");
 
 
-var allAnswerButtons = [
+let allAnswerButtons = [
     answerButton1,
     answerButton2,
     answerButton3,
@@ -101,17 +101,20 @@ function displayQuestion(index) {
 
 }
 
+const scoreKeeper = document.querySelector("#score");
+let score = 0;
+
+
 function giveAnswer(number) {
-
-
 
     console.log("Given number", number);
     let correctGuess = correctAnswer == number; // areEqual(correctA, number)
-
     let guessClass = "wrong";
     if (correctGuess) {
         console.log("You guessed correctly!");
         guessClass = "correct";
+        score += 100;
+        scoreKeeper.innerText = score;
     } else {
         console.log("Sorry, wrong answer.");
     }
@@ -125,7 +128,7 @@ function giveAnswer(number) {
 
     showNextQuestionButton();
 
-
+    return score;
 }
 
 function nextQuestion() {
@@ -133,7 +136,6 @@ function nextQuestion() {
     hideNextQuestionButton();
     currentQuestionIndex++;
     displayQuestion(currentQuestionIndex);
-
 }
 
 function hideNextQuestionButton() {

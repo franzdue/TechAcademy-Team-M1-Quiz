@@ -94,27 +94,33 @@
         </div>
         <div id="quizDisplay" class="m-auto container quizContainer">
             <h2>Frage <span id="questionNumber">X</span></h2>
-            <section class="question">
-                <section id="questionContainer">
+            <div class="question">
+                <div id="questionContainer">
                     <p id="question"></p>
                     <p id="points"></p>
-                </section>
-                <section id="answerContainer">
+                </div>
+                <div id="answerContainer">
                     <center>
                         <button id="answerButton1" class="answerBtn" onclick="giveAnswer(1);"></button>
                         <button id="answerButton2" class="answerBtn" onclick="giveAnswer(2);"></button>
                         <button id="answerButton3" class="answerBtn" onclick="giveAnswer(3);"></button>
                         <button id="answerButton4" class="answerBtn" onclick="giveAnswer(4);"></button>
                     </center>
-                </section>
-                <section>
+                </div>
+                <div>
                     <center>
                         <button id="nextQuestionButton" onclick="nextQuestion();">
                             nächste Frage
                         </button>
+                        <!--<div id="end" class="endOfQuiz">
+                            <p class="endText">
+                                Seems like you done with the Quiz. Do you want to try it again?
+                            </p>
+                            <button id="restartQuiz"><a href="index.html">Restart</a></button>
+                        </div>-->
                     </center>
-                </section>
-            </section>
+                </div>
+            </div>
             <div id="progress">
                 <div class="progressItems">
                     <p class="score">
