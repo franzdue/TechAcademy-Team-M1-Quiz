@@ -35,10 +35,10 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Zum Quiz</a>
+                            <a class="nav-link" href="#">Quiz</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Meine Rekorde</a>
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Highscores</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
@@ -46,17 +46,14 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdown1">
                                 <li><a class="dropdown-item" href="#">50/50</a></li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Frage überspringen</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Zeit anhalten</a>
+                                    <a class="dropdown-item" href="#">Skip Question</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                     <div class="text-end">
                         <button id="newUser" type="button" class="btn btn-outline-light me-2 btn-cuname">
-                            Username ändern
+                            Change Username
                         </button>
                     </div>
                 </div>
@@ -89,11 +86,11 @@
             </div>
         </div>
         <div class="container my-5">
-            <h1 class="display-2">Willkommen zum Quiz!</h1>
+            <h1 class="display-2">Welcome to our Quiz!</h1>
         </div>
         <div id="quizDisplay" class="m-auto container quizContainer">
             <div id="hideQuestions" class="">
-                <h2>Frage <span id="questionNumber">X</span></h2>
+                <h2>Question <span id="questionNumber">X</span></h2>
                 <div class="question">
                     <div id="questionContainer">
                         <p id="question"></p>
@@ -110,7 +107,7 @@
                     <div>
                         <center>
                             <button id="nextQuestionButton" onclick="nextQuestion();">
-                                nächste Frage
+                                Next Question
                             </button>
                         </center>
                     </div>
