@@ -131,11 +131,29 @@ function giveAnswer(number) {
     return score;
 }
 
+const questionContainer = document.querySelector('#hideQuestions')
+const end = document.querySelector('#end')
+const finalScore = document.querySelector('.score')
+
+
+window.onload = function () {
+    end.style.display = 'none';
+}
+
 function nextQuestion() {
-    console.log(" 'nächste Frage' Button has been clicked")
-    hideNextQuestionButton();
-    currentQuestionIndex++;
-    displayQuestion(currentQuestionIndex);
+    if (currentQuestionIndex < 9) {
+        console.log(" 'nächste Frage' Button has been clicked")
+        hideNextQuestionButton();
+        currentQuestionIndex++;
+        displayQuestion(currentQuestionIndex);
+        console.log(currentQuestionIndex)
+    } else {
+        questionContainer.classList.add('hide');
+        end.style.display = 'block';
+        finalScore.classList.add('display-5');
+        finalScore.textContent = 'Final score'
+    }
+    return currentQuestionIndex
 }
 
 function hideNextQuestionButton() {

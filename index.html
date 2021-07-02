@@ -93,36 +93,33 @@
             <h1 class="display-2">Willkommen zum Quiz!</h1>
         </div>
         <div id="quizDisplay" class="m-auto container quizContainer">
-            <h2>Frage <span id="questionNumber">X</span></h2>
-            <div class="question">
-                <div id="questionContainer">
-                    <p id="question"></p>
-                    <p id="points"></p>
-                </div>
-                <div id="answerContainer">
-                    <center>
-                        <button id="answerButton1" class="answerBtn" onclick="giveAnswer(1);"></button>
-                        <button id="answerButton2" class="answerBtn" onclick="giveAnswer(2);"></button>
-                        <button id="answerButton3" class="answerBtn" onclick="giveAnswer(3);"></button>
-                        <button id="answerButton4" class="answerBtn" onclick="giveAnswer(4);"></button>
-                    </center>
-                </div>
-                <div>
-                    <center>
-                        <button id="nextQuestionButton" onclick="nextQuestion();">
-                            nächste Frage
-                        </button>
-                        <!--<div id="end" class="endOfQuiz">
-                            <p class="endText">
-                                Seems like you done with the Quiz. Do you want to try it again?
-                            </p>
-                            <button id="restartQuiz"><a href="index.html">Restart</a></button>
-                        </div>-->
-                    </center>
+            <div id="hideQuestions" class="">
+                <h2>Frage <span id="questionNumber">X</span></h2>
+                <div class="question">
+                    <div id="questionContainer">
+                        <p id="question"></p>
+                        <p id="points"></p>
+                    </div>
+                    <div id="answerContainer">
+                        <center>
+                            <button id="answerButton1" class="answerBtn" onclick="giveAnswer(1);"></button>
+                            <button id="answerButton2" class="answerBtn" onclick="giveAnswer(2);"></button>
+                            <button id="answerButton3" class="answerBtn" onclick="giveAnswer(3);"></button>
+                            <button id="answerButton4" class="answerBtn" onclick="giveAnswer(4);"></button>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <button id="nextQuestionButton" onclick="nextQuestion();">
+                                nächste Frage
+                            </button>
+                        </center>
+                    </div>
                 </div>
             </div>
             <div id="progress">
                 <div class="progressItems">
+                    <hr class="progressDivider">
                     <p class="score">
                         Score:
                     </p>
@@ -130,6 +127,14 @@
                         0
                     </h3>
                 </div>
+            </div>
+            <div id="end" class="endOfQuiz">
+                <center>
+                    <p class="endText lead">
+                        Seems like you done with the Quiz. <br> Do you want to try it again?
+                    </p>
+                    <button id="restartQuiz" class="restart" onclick="window.location.reload();">Restart</button>
+                </center>
             </div>
         </div>
     </main>
