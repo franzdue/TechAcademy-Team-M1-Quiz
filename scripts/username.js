@@ -6,6 +6,7 @@ const newH1 = document.querySelector('h1')
 
 window.onload = function () {
     popup.style.display = 'block';
+    end.style.display = 'none';
 }
 
 spanClose.onclick = function () {

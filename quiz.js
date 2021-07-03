@@ -137,7 +137,7 @@ const finalScore = document.querySelector('.score')
 
 
 window.onload = function () {
-    end.style.display = 'none';
+    end.style.display = 'none'; //Funktioniert nicht, deshalb gleicher Befehl in username.js 
 }
 
 function nextQuestion() {
